@@ -1,0 +1,24 @@
+<html>
+
+  <script src="dash.all.min.js"></script>
+
+  <script>
+
+		function startVideo(mpd)
+		{
+			var url = "glass_live_manifest.mpd";
+			var player = dashjs.MediaPlayer().create();
+			player.initialize(document.querySelector("#videoPlayer"), url, true);
+		}
+
+  </script>
+
+  <!-- see note below about manifest URLs -->
+
+  <body onload="startVideo('glass_live_manifest.mpd');">
+
+    <video id="videoPlayer" controls></video>
+
+  </body>
+
+</html>
